@@ -1,0 +1,62 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300&display=swap');
+
+body {
+    width: 100%;
+    height: auto;
+    margin: 0;
+    font-size: 25px;
+    font-family: 'Rubik', sans-serif;
+}
+
+.nav {
+    font-size: 0;
+}
+
+.nav a.nav_btn {
+    border: 1px solid gray;
+    font-size: 25px;
+    padding: 1em 5em 1em 5em;
+    margin: 3em;
+}
+
+.nav a.nav_btn.one {
+    margin-right: 0;
+    border-radius: 20px 0 0 20px;
+}
+
+.nav a.nav_btn.two {
+    margin-left: 0;
+    border-radius: 0 20px 20px 0;
+}
+
+a.nav_btn {
+    -webkit-appearance: button;
+    -moz-appearance: button;
+    appearance: button;
+
+    text-decoration: none;
+    color: initial;
+    border: 1px solid gray;
+    padding: 1em;
+}
+
+.table {
+    display: flex;
+    align-self: center;
+    align-content: center;
+}
+
+table {
+    width: 100%;
+    margin: 0em 3em 3em 3em;
+    text-align: center;
+}
+
+table th {
+    background-color: #f8fabf;
+    color: gray;
+}
+
+th, td {
+    padding: 1em;
+}
