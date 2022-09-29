@@ -1,0 +1,38 @@
+body {
+    background-color: #f8fabf;
+}
+
+.header {
+    padding: 2em;
+}
+
+.header span {
+    margin: 1em;
+}
+
+.header #gray {
+    color: gray;
+}
+
+.container {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+}
+
+.row {
+    font-size: 30px;
+    line-height: 2em;
+}
+
+label {
+    padding: 2em;
+
+input[type=submit] {
+    text-decoration: none;
+    color: initial;
+    border: 1px solid gray;
+    padding: 1em;
+    background-color: white;
+    font-size: 24px;
+}

@@ -44,12 +44,6 @@ body {
     font-size: 24px;
 }
 
-.table {
-    display: flex;
-    align-self: center;
-    align-content: center;
-}
-
 table {
     width: 100%;
     margin: 0em 3em 3em 3em;
@@ -63,6 +57,14 @@ table th {
 
 th, td {
     padding: 1em;
+}
+
+#new_cat_btn {
+    background-color: #f8fabf;
+}
+
+.new_cat {
+    text-align: center;
 }
 
 /*napkozi_cicai*/
@@ -93,3 +95,6 @@ th, td {
 .add_resident.nav_btn {
     margin-left: 4em;
 }
+
+
+/*új cica*/
