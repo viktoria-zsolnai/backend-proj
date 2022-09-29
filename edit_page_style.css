@@ -27,6 +27,7 @@ body {
 
 label {
     padding: 2em;
+}
 
 input[type=submit] {
     text-decoration: none;
