@@ -8,6 +8,8 @@ body {
     font-family: 'Rubik', sans-serif;
 }
 
+/*napkozi_nezet, cica_nezet*/
+
 .nav {
     font-size: 0;
 }
@@ -29,7 +31,7 @@ body {
     border-radius: 0 20px 20px 0;
 }
 
-a.nav_btn {
+.nav_btn {
     -webkit-appearance: button;
     -moz-appearance: button;
     appearance: button;
@@ -38,6 +40,8 @@ a.nav_btn {
     color: initial;
     border: 1px solid gray;
     padding: 1em;
+    background-color: white;
+    font-size: 24px;
 }
 
 .table {
@@ -59,4 +63,33 @@ table th {
 
 th, td {
     padding: 1em;
+}
+
+/*napkozi_cicai*/
+
+.container {
+    display: flex;
+    flex-direction: row;
+    font-size: 30px;
+    line-height: 2em;
+    justify-content: space-around;
+}
+
+.cat {
+    background-color: #f8fabf;
+    margin-top: 0;
+    padding: 1em;
+}
+
+.left, .right {
+    padding: 0.5em;
+    margin: 0.5em;
+}
+
+.container p {
+    margin-bottom: 0;
+}
+
+.add_resident.nav_btn {
+    margin-left: 4em;
 }
