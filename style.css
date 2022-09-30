@@ -1,99 +1,104 @@
-@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Rubik:wght@300&display=swap");
 
 body {
-    width: 100%;
-    height: auto;
-    margin: 0;
-    font-size: 1.25vw;
-    font-family: 'Rubik', sans-serif;
+  width: 100%;
+  height: auto;
+  margin: 0;
+  font-size: 1.25vw;
+  font-family: "Rubik", sans-serif;
 }
 
 /*napkozi_nezet, cica_nezet*/
 
 .nav {
-    font-size: 0;
+  font-size: 0;
 }
 
 .nav a.nav_btn {
-    border: 1px solid gray;
-    font-size: 1.25vw;
-    padding: 1em 5em 1em 5em;
-    margin: 3em;
+  border: 1px solid gray;
+  font-size: 1.25vw;
+  padding: 1em 5em 1em 5em;
+  margin: 3em;
 }
 
 .nav a.nav_btn.one {
-    margin-right: 0;
-    border-radius: 20px 0 0 20px;
+  margin-right: 0;
+  border-radius: 20px 0 0 20px;
 }
 
 .nav a.nav_btn.two {
-    margin-left: 0;
-    border-radius: 0 20px 20px 0;
+  margin-left: 0;
+  border-radius: 0 20px 20px 0;
 }
 
 .nav_btn {
-    -webkit-appearance: button;
-    -moz-appearance: button;
-    appearance: button;
+  -webkit-appearance: button;
+  -moz-appearance: button;
+  appearance: button;
 
-    text-decoration: none;
-    color: initial;
-    border: 1px solid gray;
-    padding: 1em;
-    background-color: white;
-    font-size: 1.2vw;
+  text-decoration: none;
+  color: initial;
+  border: 1px solid gray;
+  padding: 1em;
+  background-color: white;
+  font-size: 1.2vw;
 }
 
 table {
-    width: 100%;
-    
-    text-align: center;
+  width: 100%;
+
+  text-align: center;
 }
 
 table th {
-    background-color: #f8fabf;
-    color: gray;
+  background-color: #f8fabf;
+  color: gray;
 }
 
-th, td {
-    padding: 1em;
+th,
+td {
+  padding: 1em;
 }
 
 #new_cat_btn {
-    background-color: #f8fabf;
+  background-color: #f8fabf;
 }
 
 .new_cat {
-    text-align: center;
+  text-align: center;
 }
 
 /*napkozi_cicai*/
 
 .container {
-    display: flex;
-    flex-direction: row;
-    font-size: 1.5vw;
-    line-height: 2em;
-    justify-content: space-around;
+  display: flex;
+  flex-direction: row;
+  font-size: 1.5vw;
+  line-height: 2em;
+  justify-content: space-around;
 }
 
 .cat {
-    background-color: #f8fabf;
-    margin-top: 0;
-    padding: 1em;
+  background-color: #f8fabf;
+  margin-top: 0;
+  padding: 1em;
 }
 
-.left, .right {
-    padding: 0.5em;
-    margin: 0.5em;
+.left,
+.right {
+  padding: 0.5em;
+  margin: 0.5em;
 }
 
 .container p {
-    margin-bottom: 0;
+  margin-bottom: 0;
 }
 
 .add_resident.nav_btn {
-    margin-left: 4em;
+  margin-left: 4em;
 }
 
-
+/*welcome page*/
+h1 {
+  text-align: center;
+}
