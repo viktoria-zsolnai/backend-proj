@@ -1,39 +1,44 @@
 body {
-    background-color: #f8fabf;
+  background-color: #f8fabf;
 }
 
 .header {
-    padding: 2em;
+  padding: 2em;
 }
 
 .header span {
-    margin: 1em;
+  margin: 1em;
 }
 
 .header #gray {
-    color: gray;
+  color: gray;
 }
 
-.container {
-    display: flex;
-    flex-direction: row;
-    align-items: flex-start;
+.container.cat {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
 }
 
 .row {
-    font-size: 30px;
-    line-height: 2em;
+  display: flex;
+  font-size: 30px;
+  line-height: 2em;
+  flex-direction: row;
+  width: 20em;
+  justify-content: space-between;
 }
 
 label {
-    padding: 2em;
+  padding: 2em;
 }
 
-input[type=submit] {
-    text-decoration: none;
-    color: initial;
-    border: 1px solid gray;
-    padding: 1em;
-    background-color: white;
-    font-size: 24px;
+input[type="submit"] {
+  text-decoration: none;
+  color: initial;
+  border: 1px solid gray;
+  padding: 1em;
+  background-color: white;
+  font-size: 24px;
+  margin: 2em;
 }
