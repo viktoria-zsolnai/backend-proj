@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="hu">
+  <head>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="edit_page_style.css" />
+  </head>
+  <body>
+    <div class="header">
+      <span>Cicák</span>
+      <span>&raquo;</span>
+      <span id="gray">Cica módosítása</span>
+    </div>
+
+    <form action="">
+      <div class="container cat">
+        <div class="row">
+          <div class="left_col">
+            <label for="name">Név</label>
+          </div>
+          <div class="right_col">
+            <input type="text" id="name" disabled/>
+          </div>
+        </div>
+        <div class="row">
+          <div class="left_col">
+            <label for="weight">Súly</label>
+          </div>
+          <div class="right_col">
+            <input type="text" id="weight" />
+          </div>
+        </div>
+        <div class="row">
+          <div class="left_col">
+            <label for="food">Kedvenc étel</label>
+          </div>
+          <div class="right_col">
+            <input type="text" id="food" />
+          </div>
+        </div>
+        <div class="row">
+          <div class="left_col">
+            <label for="friendly">Barátságos?</label>
+          </div>
+          <div class="right_col">
+            <input type="text" id="friendly" />
+          </div>
+        </div>
+      </div>
+      <input type="submit" value="Mentés" class="nav_btn" />
+      <a href="/cica_nezet.html" class="nav_btn">Mégse</a>
+    </form>
+  </body>
+</html>
