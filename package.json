@@ -1,0 +1,22 @@
+{
+  "name": "js_hazi",
+  "version": "1.0.0",
+  "description": "Szerver oldali JS házifeladat",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/viktoria-zsolnai/backend-proj.git"
+  },
+  "author": "Zsolnai Viktória",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/viktoria-zsolnai/backend-proj/issues"
+  },
+  "homepage": "https://github.com/viktoria-zsolnai/backend-proj#readme",
+  "dependencies": {
+    "express": "^4.18.2"
+  }
+}

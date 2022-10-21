@@ -1,0 +1,35 @@
+GET /   -index.html
+    renderMW(index.html)
+
+GET /napkozi_nezet
+    getNapkozikMW                      
+    renderMW(napkozi_nezet.html)
+
+GET /napkozi_nezet/:napkozi_id/cicak    
+    getNapkoziMW
+    getCicakMW
+    renderMW(napkozi_cicai.html)
+
+GET, POST /napkozi_nezet/:napkozi_id/edit     
+    getNapkoziMW
+    saveNapkoziMW
+    renderMW(napkozi_edit.html)
+
+GET /cica_nezet                         
+    getCicakMW
+    renderMW(cica_nezet.html)
+
+GET, POST /cica_nezet/:cica_id/edit           
+    getCicaMW
+    saveCicaMW
+    renderMW(cica_edit.html)
+
+GET, POST/cica_nezet/add                     
+    saveCicaMW
+    renderMW(cica_add.html)
+
+GET /cica_nezet/:cica_id/remove
+    getCicaMW
+    delCicaMW
+
+
