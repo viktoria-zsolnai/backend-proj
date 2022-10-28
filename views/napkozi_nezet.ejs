@@ -1,0 +1,44 @@
+<%- include('header') -%>
+
+    <div class="nav" style="background-color: white">
+      <a href="#" class="nav_btn one">Napközik</a>
+      <a href="/cica_nezet" class="nav_btn two">Cicák</a>
+    </div>
+
+    <div class="table" style="background-color: white">
+      <table>
+        <thead>
+          <tr>
+            <th>Név</th>
+            <th>Tulajdonos</th>
+            <th>Kapacitás</th>
+            <th>Lakók</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Barátság napközi</td>
+            <td>Kincső</td>
+            <td>20 cica</td>
+            <td><a href="/napkozi_nezet/1/cicak" class="nav_btn">Megtekint</a></td>
+            <td><a href="/napkozi_nezet/1/edit" class="nav_btn">Módosítás</a></td>
+          </tr>
+          <tr>
+            <td>Szivárvány napközi</td>
+            <td>Zsolt</td>
+            <td>15 cica</td>
+            <td><a href="/napkozi_nezet/2/cicak" class="nav_btn">Megtekint</a></td>
+            <td><a href="/napkozi_nezet/2/edit" class="nav_btn">Módosítás</a></td>
+          </tr>
+          <tr>
+            <td>Cinege napközi</td>
+            <td>Marietta</td>
+            <td>30 cica</td>
+            <td><a href="/napkozi_nezet/3/cicak" class="nav_btn">Megtekint</a></td>
+            <td><a href="/napkozi_nezet/3/edit" class="nav_btn">Módosítás</a></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <%- include('footer') -%>

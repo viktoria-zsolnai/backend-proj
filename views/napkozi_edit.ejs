@@ -1,0 +1,40 @@
+<%- include('header') -%>
+
+    <div class="header">
+      <span>Napközik</span>
+      <span>&raquo;</span>
+      <span id="gray">Napközi módosítás</span>
+    </div>
+
+    <form action="">
+      <div class="container cat">
+        <div class="row">
+          <div class="left_col">
+            <label for="name">Név</label>
+          </div>
+          <div class="right_col">
+            <input type="text" id="name" />
+          </div>
+        </div>
+        <div class="row">
+          <div class="left_col">
+            <label for="owner">Tulajdonos</label>
+          </div>
+          <div class="right_col">
+            <input type="text" id="owner" />
+          </div>
+        </div>
+        <div class="row">
+          <div class="left_col">
+            <label for="cap">Kapacitás</label>
+          </div>
+          <div class="right_col">
+            <input type="text" id="cap" />
+          </div>
+        </div>
+      </div>
+      <input type="submit" value="Mentés" class="nav_btn" />
+      <a href="/napkozi_nezet" class="nav_btn">Mégse</a>
+    </form>
+  </body>
+</html>

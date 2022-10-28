@@ -1,0 +1,65 @@
+<%- include('header') -%>
+    <div class="nav" style="background-color: white">
+      <a href="/napkozi_nezet" class="nav_btn one">Napközik</a>
+      <a href="#" class="nav_btn two">Cicák</a>
+    </div>
+
+    <div class="table" style="background-color: white">
+      <table>
+        <thead>
+          <tr>
+            <th>Név</th>
+            <th>Súly</th>
+            <th>Kedvenc étel</th>
+            <th>Barátságos?</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Sári</td>
+            <td>4kg</td>
+            <td>Laktózmentes tej</td>
+            <td>Nem</td>
+            <td id="edit">
+              <a href="/cica_nezet/1/edit" class="nav_btn">Módosítás</a>
+            </td>
+            <td id="del"><a href="/cica_nezet/1/remove" class="nav_btn">Törlés</a></td>
+          </tr>
+          <tr>
+            <td>Gézengúz</td>
+            <td>4.2kg</td>
+            <td>Egér</td>
+            <td>Igen</td>
+            <td id="edit">
+              <a href="/cica_nezet/2/edit" class="nav_btn">Módosítás</a>
+            </td>
+            <td id="del"><a href="/cica_nezet/2/remove" class="nav_btn">Törlés</a></td>
+          </tr>
+          <tr>
+            <td>Lulu</td>
+            <td>5kg</td>
+            <td>Tasakos eledel</td>
+            <td>Igen</td>
+            <td id="edit">
+              <a href="/cica_nezet/3/edit" class="nav_btn">Módosítás</a>
+            </td>
+            <td id="del"><a href="/cica_nezet/3/remove" class="nav_btn">Törlés</a></td>
+          </tr>
+          <tr>
+            <td>Cirmi</td>
+            <td>4.8kg</td>
+            <td>Lazac</td>
+            <td>Nem</td>
+            <td id="edit">
+              <a href="/cica_nezet/4/edit" class="nav_btn">Módosítás</a>
+            </td>
+            <td id="del"><a href="/cica_nezet/4/remove" class="nav_btn">Törlés</a></td>
+          </tr>
+        </tbody>
+      </table>
+      <div class="new_cat">
+        <a href="/cica_nezet/add" class="nav_btn" id="new_cat_btn">Új cica hozzáadása</a>
+      </div>
+    </div>
+
+    <%- include('footer') -%>
