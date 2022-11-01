@@ -1,49 +1,68 @@
-const renderMW = require('../middlewares/renderMW');
-const getNapkozikMW = require('../middlewares/NapkoziMW/getNapkozikMW');
-const getNapkoziMW = require('../middlewares/NapkoziMW/getNapkoziMW');
-const saveNapkoziMW = require('../middlewares/NapkoziMW/saveNapkoziMW');
-const getCicakMW = require('../middlewares/CicaMW/getCicakMW');
-const getCicaMW = require('../middlewares/CicaMW/getCicaMW');
-const saveCicaMW = require('../middlewares/CicaMW/saveCicaMW');
-const delCicaMW = require('../middlewares/CicaMW/delCicaMW');
+const renderMW = require("../middlewares/renderMW");
+const getNapkozikMW = require("../middlewares/NapkoziMW/getNapkozikMW");
+const getNapkoziMW = require("../middlewares/NapkoziMW/getNapkoziMW");
+const saveNapkoziMW = require("../middlewares/NapkoziMW/saveNapkoziMW");
+const getCicakMW = require("../middlewares/CicaMW/getCicakMW");
+const getCicaMW = require("../middlewares/CicaMW/getCicaMW");
+const saveCicaMW = require("../middlewares/CicaMW/saveCicaMW");
+const delCicaMW = require("../middlewares/CicaMW/delCicaMW");
+
+const NapkoziModel = require('../models/napkozi');
+const CicaModel = require('../models/cica');
 
 module.exports = function (app) {
-    const objRepo = {};
+  const objRepo = {
 
-    app.get('/',
-        renderMW(objRepo, 'index'));
-    
-    app.get(
-        '/napkozi_nezet',
-        getNapkozikMW(objRepo),
-        renderMW(objRepo, 'napkozi_nezet'));
+    NapkoziModel: NapkoziModel,
+    CicaModel: CicaModel
 
-    app.get('/napkozi_nezet/:napkozi_id/cicak',
-        getNapkoziMW(objRepo),
-        getCicakMW(objRepo), //a hozzáadást áthelyezni macska addedit alá
-        renderMW(objRepo, 'napkozi_cicai'));
+  };
 
-    app.use('/napkozi_nezet/:napkozi_id/edit',
-        getNapkoziMW(objRepo),
-        saveNapkoziMW(objRepo),
-        renderMW(objRepo, 'napkozi_edit'));
-    
-    app.get('/cica_nezet',
-        getCicakMW(objRepo),
-        renderMW(objRepo, 'cica_nezet')); 
-    
-    app.use('/cica_nezet/:cica_id/edit',
-        getCicaMW(objRepo),
-        saveCicaMW(objRepo),
-        renderMW(objRepo, 'cica_edit')); //IDE
+  app.get(
+    "/napkozi_nezet/:napkozi_id/cicak",
+    getNapkoziMW(objRepo),
+    getCicakMW(objRepo),
+    renderMW(objRepo, "napkozi_cicai")
+  );
 
-    app.use('/cica_nezet/add',
-        saveCicaMW(objRepo),                //IDE
-        renderMW(objRepo, 'cica_add'));
-    
-    app.get('/cica_nezet/:cica_id/remove',
-        getCicaMW(objRepo),
-        delCicaMW(objRepo),
-        renderMW(objRepo, 'cica_nezet'));
+  app.use(
+    "/napkozi_nezet/:napkozi_id/edit",
+    getNapkoziMW(objRepo),
+    saveNapkoziMW(objRepo),
+    renderMW(objRepo, "napkozi_edit")
+  );
 
+  app.use(
+    "/cica_nezet/:cica_id/edit",
+    getNapkozikMW(objRepo),
+    getCicaMW(objRepo),
+    saveCicaMW(objRepo),
+    renderMW(objRepo, "cica_edit")
+  );
+
+  app.get(
+    "/napkozi_nezet",
+    getNapkozikMW(objRepo),
+    renderMW(objRepo, "napkozi_nezet")
+  );
+
+  app.use(
+    "/cica_nezet/add",
+    getNapkozikMW(objRepo),
+    saveCicaMW(objRepo),
+    renderMW(objRepo, "cica_add")
+  );
+
+  app.get(
+    "/cica_nezet/:cica_id/remove",
+    getCicaMW(objRepo),
+    delCicaMW(objRepo),
+    renderMW(objRepo, "cica_nezet")
+  );
+
+  app.get("/cica_nezet", 
+  getCicakMW(objRepo), 
+  renderMW(objRepo, "cica_nezet"));
+
+  app.get("/", renderMW(objRepo, "index"));
 };

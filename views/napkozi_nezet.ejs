@@ -16,27 +16,15 @@
           </tr>
         </thead>
         <tbody>
+          <% napkozik.forEach(function(napkozi){ %>
           <tr>
-            <td>Barátság napközi</td>
-            <td>Kincső</td>
-            <td>20 cica</td>
-            <td><a href="/napkozi_nezet/1/cicak" class="nav_btn">Megtekint</a></td>
-            <td><a href="/napkozi_nezet/1/edit" class="nav_btn">Módosítás</a></td>
+            <td><%= napkozi.nev %></td>
+            <td><%= napkozi.tulaj %></td>
+            <td><%= napkozi.kapacitas %></td>
+            <td><a href="/napkozi_nezet/<%= napkozi._id %>/cicak" class="nav_btn">Megtekint</a></td>
+            <td><a href="/napkozi_nezet/<%= napkozi._id %>/edit" class="nav_btn">Módosítás</a></td>
           </tr>
-          <tr>
-            <td>Szivárvány napközi</td>
-            <td>Zsolt</td>
-            <td>15 cica</td>
-            <td><a href="/napkozi_nezet/2/cicak" class="nav_btn">Megtekint</a></td>
-            <td><a href="/napkozi_nezet/2/edit" class="nav_btn">Módosítás</a></td>
-          </tr>
-          <tr>
-            <td>Cinege napközi</td>
-            <td>Marietta</td>
-            <td>30 cica</td>
-            <td><a href="/napkozi_nezet/3/cicak" class="nav_btn">Megtekint</a></td>
-            <td><a href="/napkozi_nezet/3/edit" class="nav_btn">Módosítás</a></td>
-          </tr>
+          <% }); %>
         </tbody>
       </table>
     </div>

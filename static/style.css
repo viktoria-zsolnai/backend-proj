@@ -66,6 +66,7 @@ td {
 
 .new_cat {
   text-align: center;
+  padding: 2em;
 }
 
 /*napkozi_cicai*/
@@ -101,4 +102,9 @@ td {
 /*welcome page*/
 h1 {
   text-align: center;
+}
+
+select {
+  padding: 0.3em;
+  width: 12.75em;
 }
