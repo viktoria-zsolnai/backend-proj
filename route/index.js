@@ -3,6 +3,7 @@ const getNapkozikMW = require("../middlewares/NapkoziMW/getNapkozikMW");
 const getNapkoziMW = require("../middlewares/NapkoziMW/getNapkoziMW");
 const saveNapkoziMW = require("../middlewares/NapkoziMW/saveNapkoziMW");
 const getCicakMW = require("../middlewares/CicaMW/getCicakMW");
+const getNapkoziCicakMW = require("../middlewares/CicaMW/getNapkoziCicakMW");
 const getCicaMW = require("../middlewares/CicaMW/getCicaMW");
 const saveCicaMW = require("../middlewares/CicaMW/saveCicaMW");
 const delCicaMW = require("../middlewares/CicaMW/delCicaMW");
@@ -18,10 +19,16 @@ module.exports = function (app) {
 
   };
 
+  app.use(
+    "/napkozi_nezet/add",
+    saveNapkoziMW(objRepo),
+    renderMW(objRepo, "napkozi_add")
+  );
+
   app.get(
     "/napkozi_nezet/:napkozi_id/cicak",
     getNapkoziMW(objRepo),
-    getCicakMW(objRepo),
+    getNapkoziCicakMW(objRepo),
     renderMW(objRepo, "napkozi_cicai")
   );
 
@@ -32,6 +39,12 @@ module.exports = function (app) {
     renderMW(objRepo, "napkozi_edit")
   );
 
+  app.get(
+    "/napkozi_nezet",
+    getNapkozikMW(objRepo),
+    renderMW(objRepo, "napkozi_nezet")
+  );
+
   app.use(
     "/cica_nezet/:cica_id/edit",
     getNapkozikMW(objRepo),
@@ -40,11 +53,6 @@ module.exports = function (app) {
     renderMW(objRepo, "cica_edit")
   );
 
-  app.get(
-    "/napkozi_nezet",
-    getNapkozikMW(objRepo),
-    renderMW(objRepo, "napkozi_nezet")
-  );
 
   app.use(
     "/cica_nezet/add",

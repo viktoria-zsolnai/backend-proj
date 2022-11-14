@@ -1,4 +1,4 @@
-<!-- header macska neve behelyettesítődik, dropdown a napközi kiválasztásához-->
+
 
 <%- include('header') -%>
 
@@ -8,48 +8,48 @@
       <span id="gray">Cica módosítása</span> 
     </div>
 
-    <form action="">
+    <form method="POST">
       <div class="container cat">
         <div class="row">
           <div class="left_col">
-            <label for="name">Név</label>
+            <label for="nev">Név</label>
           </div>
           <div class="right_col">
-            <input type="text" id="name" placeholder="<%= cica.nev %>" disabled />
+            <input type="text" id="nev" name="nev" placeholder="<%= cica.nev %>" value = "<%= cica.nev %>" readonly/>
           </div>
         </div>
         <div class="row">
           <div class="left_col">
-            <label for="weight">Súly</label>
+            <label for="suly">Súly</label>
           </div>
           <div class="right_col">
-            <input type="text" id="weight" placeholder="<%= cica.suly %>"/>
+            <input type="text" id="suly" name="suly" placeholder="<%= cica.suly %>" value = "<%= cica.suly %>"/>
           </div>
         </div>
         <div class="row">
           <div class="left_col">
-            <label for="food">Kedvenc étel</label>
+            <label for="etel">Kedvenc étel</label>
           </div>
           <div class="right_col">
-            <input type="text" id="food" placeholder="<%= cica.etel %>"/>
-          </div>
-        </div>
-
-        <div class="row">
-          <div class="left_col">
-            <label for="friendly">Barátságos?</label>
-          </div>
-          <div class="right_col">
-            <input type="text" id="friendly" placeholder="<%= cica.baratsagos %>"/>
+            <input type="text" id="etel" name="etel" placeholder="<%= cica.etel %>" value = "<%= cica.etel %>"/>
           </div>
         </div>
 
         <div class="row">
           <div class="left_col">
-            <label for="daycare">Napközi</label>
+            <label for="baratsagos">Barátságos?</label>
           </div>
           <div class="right_col">
-              <select name="daycare" id="daycare">
+            <input type="text" id="baratsagos" name="baratsagos" placeholder="<%= cica.baratsagos %>" value = "<%= cica.baratsagos %>"/>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="left_col">
+            <label for="_napkozije">Napközi</label>
+          </div>
+          <div class="right_col">
+              <select name="_napkozije" id="_napkozije">
                 <% napkozik.forEach(function(napkozi){ %>
                 <option value="<%= napkozi._id %>"><%= napkozi.nev %></option>
                 <% }); %>

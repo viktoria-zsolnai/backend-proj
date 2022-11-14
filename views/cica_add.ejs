@@ -6,51 +6,51 @@
       <span id="gray">Új cica hozzáadása</span>
     </div>
 
-    <form action="">
+    <form method="post">
       <div class="container cat">
         
         <div class="row">
           <div class="left_col">
-            <label for="name">Név</label>
+            <label for="nev">Név</label>
           </div>
           <div class="right_col">
-            <input type="text" id="name" />
+            <input type="text" id="nev" name="nev"/>
           </div>
         </div>
 
         <div class="row">
           <div class="left_col">
-            <label for="weight">Súly</label>
+            <label for="suly">Súly</label>
           </div>
           <div class="right_col">
-            <input type="text" id="weight" />
+            <input type="text" id="suly" name="suly"/>
           </div>
         </div>
 
         <div class="row">
           <div class="left_col">
-            <label for="food">Kedvenc étel</label>
+            <label for="etel">Kedvenc étel</label>
           </div>
           <div class="right_col">
-            <input type="text" id="food" />
+            <input type="text" id="etel" name="etel"/>
           </div>
         </div>
 
         <div class="row">
           <div class="left_col">
-            <label for="friendly">Barátságos?</label>
+            <label for="baratsagos">Barátságos?</label>
           </div>
           <div class="right_col">
-            <input type="text" id="friendly" />
+            <input type="text" id="baratsagos" name="baratsagos"/>
           </div>
         </div>
 
         <div class="row">
           <div class="left_col">
-            <label for="daycare">Napközi</label>
+            <label for="_napkozije">Napközi</label>
           </div>
           <div class="right_col">
-              <select name="daycare" id="daycare">
+              <select name="_napkozije" id="_napkozije">
                 <% napkozik.forEach(function(napkozi){ %>
                 <option value="<%= napkozi._id %>"><%= napkozi.nev %></option>
                 <% }); %>

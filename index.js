@@ -1,3 +1,25 @@
+/*const NapkoziModel = require('./models/napkozi');
+const CicaModel = require('./models/cica');
+
+let egynapkozi = new NapkoziModel();
+egynapkozi.nev = "Ö";
+egynapkozi.tulaj = "Sany";
+egynapkozi.kapacitas = 5;
+egynapkozi.save((err) => { 
+    console.log(err);
+    let egycica = new CicaModel();
+    egycica.nev = "Golo";
+    egycica.suly = 5;
+    egycica.etel = "Kave";
+    egycica.baratsagos = "Nem";
+    egycica._napkozije = egynapkozi;
+    egycica.save((err) => {
+        console.log(err);
+    });
+});
+*/
+
+
 const express = require('express');
 const app = express();
 const bodyParser = require('body-parser');
